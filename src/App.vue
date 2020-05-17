@@ -16,8 +16,11 @@
         />
       </div>
       
-      <router-link class="white--text ml-10" to="/cl">USD/CLP</router-link>
-      <router-link class="white--text ml-10" to="/ar">USD/AR</router-link>
+      <v-list class="primary d-flex">
+        <v-list-item class="ml-10" rounded="true" to="/cl">USD/CLP</v-list-item>
+        <v-list-item class="ml-10" to="/ar">USD/ARG</v-list-item>
+        <v-list-item class="ml-10" to="/spacex">SpaceX</v-list-item>
+      </v-list>
     </v-app-bar>
 
     <v-content class="brown lighten-3">

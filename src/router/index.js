@@ -7,17 +7,22 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/cl.vue')
+    component: () => import('../views/Cl.vue')
   },
   {
     path: '/cl',
-    name: 'CL',
-    component: () => import('../views/cl.vue')
+    name: 'Cl',
+    component: () => import('../views/Cl.vue')
   },
   {
     path: '/ar',
-    name: 'AR',
-    component: () => import('../views/ar.vue')
+    name: 'Ar',
+    component: () => import('../views/Ar.vue')
+  },
+  {
+    path: '/spacex',
+    name: 'SpaceX',
+    component: () => import('../views/SpaceX.vue')
   },
 ]
 
