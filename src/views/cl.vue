@@ -13,8 +13,8 @@
           @change="getDolar(fecha)"
           ></v-date-picker>
       </v-card>
-      <v-card color="warning">
-        <v-card-text class="display-1 text-sm-center white--text  ">{{precioDolar}} </v-card-text>
+      <v-card color="indigo lighten-3">
+        <v-card-text class="display-1 text-sm-center">{{precioDolar}} </v-card-text>
       </v-card>
     </v-flex>
   </v-layout>

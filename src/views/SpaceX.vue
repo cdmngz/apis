@@ -1,18 +1,17 @@
 <template>
 <div>
-	<v-layout class="mt-7" :wrap="true">
-    <v-flex class="mx-2" v-for="(item, index) of arrayTotal" :key="index">
+	<v-layout :wrap="true" xs="12" md="4">
+    <v-flex class="mt-7" v-for="(item, index) of arrayTotal" :key="index">
       
       <v-card
-        class="mx-auto my-8"
-        max-width="374"
+        class="mx-auto"
+        max-width="333"
       >
         <v-img
-          height="250"
           src="@/assets/falcon-9.jpg"
         ></v-img>
 
-        <v-card-title>{{ item.rocket.rocket_name }} <sup> #{{ item.flight_number }}</sup></v-card-title>
+        <v-card-title>{{ item.rocket.rocket_name }}<sup>vo{{ item.flight_number }}</sup></v-card-title>
 
         <v-card-text>
           <div class="my-4 subtitle-1">
@@ -25,26 +24,19 @@
           </div>
         </v-card-text>
 
-    <v-divider class="mx-4"></v-divider>
+        <v-divider class="mx-4 mt-n5"></v-divider>
 
-    <v-card-title>Lanzamiento: {{ item.launch_date_utc.substring(0,10) }}</v-card-title>
+        <v-card-title>Lanzamiento: {{ item.launch_date_utc.substring(0,16) }}</v-card-title>
 
-    <v-card-text>
-      <v-chip-group
-        v-model="selection"
-        active-class="primary accent-4 white--text"
-        column
-      >
-        <v-chip>Lugar</v-chip>
-
-        <v-chip>Órbita</v-chip>
-
-        <v-chip>Updated</v-chip>
-
-        <v-chip>Fuente</v-chip>
-      </v-chip-group>
-    </v-card-text>
-  </v-card>
+        <v-card-text class="mt-n4">
+          <div class="my-4 subtitle-2" v-show="item.launch_site.site_name_long">
+            <b>Lugar Lanzamiento: </b>{{ item.launch_site.site_name_long }}
+          </div>
+          <div class="my-4 subtitle-2" v-show="item.rocket.second_stage.payloads[0].orbit">
+            <b>Órbita: </b>{{ item.rocket.second_stage.payloads[0].orbit }}
+          </div>
+        </v-card-text>
+      </v-card>
 
     </v-flex>
   </v-layout>
@@ -57,7 +49,7 @@ import { mapMutations } from 'vuex'
 
 export default {
   data: () => ({
-    selection: 1,
+    option: '',
     arrayTotal: []
   }),
   created() {
@@ -80,6 +72,9 @@ export default {
         })
         
       this.ocultarLoading()
+    },
+    mostrarOpcion(value) {
+      this.option = value
     }
   }
 }

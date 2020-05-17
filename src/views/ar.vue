@@ -1,8 +1,8 @@
 <template>
 <div>
-  <v-layout class="mt-7" :wrap="true">
+  <v-layout class="mt-2" :wrap="true">
     <v-flex class="ma-5" v-for="(item, index) of arregloTotal" :key="index">
-      <v-card class="pa-5 brown lighten-5">
+      <v-card class="pa-5" elevation="2">
         <h2><u>{{ item.casa.nombre }}</u></h2>
         <h4>Compra: {{ item.casa.compra }}</h4>
         <h4>Venta: {{ item.casa.venta }}</h4>

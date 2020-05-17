@@ -2,28 +2,26 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
       dark
     >
-      <div class="d-flex align-center">
+      <div class="mx-5">
         <v-img
-          alt="Vuetify Logo"
-          class="shrink ms-8"
+          class="shrink"
           contain
           src="@/assets/Flat-Icons.com-Flat-Cabin.svg"
           transition="scale-transition"
           width="40"
         />
       </div>
-      
-      <v-list class="primary d-flex">
-        <v-list-item class="ml-10" rounded="true" to="/cl">USD/CLP</v-list-item>
-        <v-list-item class="ml-10" to="/ar">USD/ARG</v-list-item>
-        <v-list-item class="ml-10" to="/spacex">SpaceX</v-list-item>
-      </v-list>
+
+      <v-tabs>
+        <v-tab to="/ar">AR</v-tab>
+        <v-tab to="/cl">CLP</v-tab>
+        <v-tab to="/spacex">SpaceX</v-tab>
+      </v-tabs>
     </v-app-bar>
 
-    <v-content class="brown lighten-3">
+    <v-content>
       <v-container>
         <v-dialog
           v-model="loading.mostrar"
@@ -43,9 +41,11 @@
                 class="mb-0"
               ></v-progress-linear>
             </v-card-text>
-        </v-card>
+          </v-card>
         </v-dialog>
+
         <router-view/>
+      
       </v-container>
     </v-content>
   </v-app>
