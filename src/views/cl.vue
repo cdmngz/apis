@@ -14,7 +14,7 @@
           ></v-date-picker>
       </v-card>
       <v-card color="indigo lighten-3">
-        <v-card-text class="display-1 text-sm-center">{{precioDolar}} </v-card-text>
+        <v-card-text class="display-1 text-sm-center">1USD = {{ precioDolar }}</v-card-text>
       </v-card>
     </v-flex>
   </v-layout>

@@ -7,7 +7,7 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/Cl.vue')
+    component: () => import('../views/Ar.vue')
   },
   {
     path: '/cl',
