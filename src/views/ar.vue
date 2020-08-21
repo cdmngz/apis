@@ -19,6 +19,7 @@ import axios from 'axios'
 import { mapMutations } from 'vuex'
 
 export default {
+  name: 'Ar',
   data: () => ({
     arregloTotal: []
   }),

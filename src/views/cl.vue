@@ -32,6 +32,7 @@ import axios from 'axios'
 import { mapMutations } from 'vuex'
 
 export default {
+  name: 'Cl',
   data: () => ({
     fecha: new Date().toISOString().substring(0, 10),
     maximo: new Date().toISOString().substring(0, 10),

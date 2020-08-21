@@ -15,18 +15,19 @@
       </div>
 
       <v-tabs>
-        <v-tab to="/ar">AR</v-tab>
-        <v-tab to="/cl">CLP</v-tab>
         <v-tab to="/spacex">SpaceX</v-tab>
+        <v-tab to="/ar">AR</v-tab>
+        <v-tab to="/cl">CL</v-tab>
       </v-tabs>
     </v-app-bar>
 
     <v-content>
       <v-container>
         <v-dialog
-          v-model="loading.mostrar"
           hide-overlay
           persistent
+          show-arrows
+          v-model="loading.mostrar"
           width="300"
         >
           <v-card

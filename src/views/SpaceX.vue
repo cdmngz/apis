@@ -98,7 +98,7 @@ export default {
 }
 .espacio img:not(:first-child):not(:last-child) {
   animation: nubes 300s infinite;
-  width: 200px;
+  width: 300px;
 }
 .espacio img:nth-of-type(2) {
   bottom: 22%;
