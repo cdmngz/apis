@@ -50,6 +50,7 @@ import axios from 'axios'
 import { mapMutations } from 'vuex'
 
 export default {
+  name: 'SpaceX',
   data: () => ({
     arrayTotal: [],
     option: '',
